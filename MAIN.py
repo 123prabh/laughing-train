@@ -58,3 +58,7 @@ def get_forecast_data(self):
         icon_label = Label(root, image=icon_image, bg="white")
         icon_label.pack()
         temperature_label = Label(root, text=f"{self.temperature}°C", font=("Arial", 40), bg="white")
+        temperature_label.pack()
+        weather_label = Label(root, text=self.weather_description, font=("Arial", 20), bg="white")
+        weather_label.pack()
+        forecast_label = Label(root, text="Forecast:", font=("Arial", 20), bg="white")
