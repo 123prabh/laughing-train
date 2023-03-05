@@ -55,3 +55,6 @@ def get_forecast_data(self):
         icon_url = f"http://openweathermap.org/img/wn/{self.weather_icon}.png"
         icon_data = requests.get(icon_url).content
         icon_image = PhotoImage(data=icon_data)
+        icon_label = Label(root, image=icon_image, bg="white")
+        icon_label.pack()
+        temperature_label = Label(root, text=f"{self.temperature}°C", font=("Arial", 40), bg="white")
