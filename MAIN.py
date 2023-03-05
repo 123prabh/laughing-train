@@ -28,3 +28,6 @@ def get_forecast_data(self):
         forecast_data = json.loads(response.content)["list"]
         self.forecast_data = []
         for forecast in forecast_data:
+           date_str = forecast["dt_txt"]
+        date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+        if date.hour == 12:
