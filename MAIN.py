@@ -76,3 +76,5 @@ def get_forecast_data(self):
               date_label.pack()
             time_label = Label(root, text=forecast["time"], font=("Arial", 16), bg="white")
             time_label.pack()
+             temperature_label = Label(root, text=f"{forecast['temperature']}°C", font=("Arial", 16), bg="white")
+            temperature_label.pack()
