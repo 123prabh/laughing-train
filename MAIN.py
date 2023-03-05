@@ -37,3 +37,7 @@ def get_forecast_data(self):
         self.forecast_data.append({
                     "date": date.strftime("%Y-%m-%d"),
                     "time": date.strftime("%H:%M"),
+                    "temperature": temperature,
+                    "weather_description": weather_description,
+                    "weather_icon": weather_icon
+                })
