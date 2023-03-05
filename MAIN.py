@@ -51,3 +51,7 @@ def get_forecast_data(self):
          root = Tk()
          root.title(f"Weather in {self.city_name}")
          root.geometry("400x400")
+         root.configure(bg="white")
+        icon_url = f"http://openweathermap.org/img/wn/{self.weather_icon}.png"
+        icon_data = requests.get(icon_url).content
+        icon_image = PhotoImage(data=icon_data)
